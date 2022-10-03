@@ -1,0 +1,291 @@
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+/*header*/
+#head-cont{
+  width: 100%;
+  background-color: #189ab4;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#head-cont ul{
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#head-cont ul li{
+ position: relative;
+ list-style: none;
+ padding: 10px 10px;
+}
+
+#head-cont ul li a{
+  text-decoration: none;
+  color: white;
+  opacity: 50%;
+  padding: 0 10px;
+}
+
+#head-cont ul li ul{
+  background-color:#189ab4 ;
+  color: white;
+  position: absolute;
+  top: 30px;
+  display: block;
+  width: 200px;
+  left: 0;
+}
+
+#head-cont ul li ul{
+  background-color:#189ab4 ;
+  color: white;
+  position: absolute;
+  top: 35px;
+  display: block;
+  width: 200px;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#head-cont ul li ul li{
+  border-right: none;
+  border-bottom: rgba(225,225,225,.2);
+}
+
+#head-cont ul li:hover{
+  background: #1bb1cf;
+  width:auto;
+  height: auto;
+  padding: auto;
+}
+
+#head-cont ul li:hover ul{
+  opacity: 1;
+  visibility: visible;
+}
+
+#logo{
+  float: right;
+  justify-content: flex-end;
+  width: 50px; 
+  height: 50px;
+  padding-right: 30px;
+  margin-right: 30px;
+  padding-bottom: 50px;
+}
+
+.drop-triangle{
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  top: 13px;
+  position: relative;
+  left:10px;
+  border-top: 9px solid white;
+}
+
+#header{
+color: #1bb1cf;
+}
+
+
+/*body*/
+#bo-content{
+  width:100%;
+  height: 700px;
+  display: flex;
+}
+#title{
+  margin-left: 30px;
+  font-weight:normal;
+  color: #189ab4;
+  font-weight: bold;
+}
+
+#bo-content>.left-side{
+	width: 50%;
+	height: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#bo-content>.left-side{
+	width:50%;
+	height: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  margin-right: 20px;
+}
+
+#bo-content>.right-side{
+	width: calc(100% / 2);
+	height: 100%;
+	
+	display: flex;
+  flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  margin-bottom: 100px;
+  text-align: center;
+  padding-right:100px;
+}
+
+
+.deco{
+  font-weight:normal;
+  color: #189ab4;
+  margin:0 auto;
+}
+
+input[type=email],input[type=text],input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-style:ridge;
+  border-radius: 4px;
+} 
+
+.gender{
+  display: block;
+  text-align:center;
+  margin-right:200px;
+  margin-bottom:40px;
+}
+
+.agree{
+  text-align:center;
+  margin-right:100px;
+}
+
+.username:focus {
+  border: 2px solid red;
+  border-radius: 4px;
+
+}
+
+#submit{
+  background: #189ab4;
+  border-radius: 12px;
+  color: white;
+}
+
+/*footer*/
+#footer {
+  position: fixed;
+  width: 100%;
+  background-color: #189ab4;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  flex-direction: column;
+  display: inline-block;
+  
+}
+
+#footer-text{
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+#social{
+  width: 100%;
+  text-align: center;
+}
+ 
+/* For mobile phones: */
+@media only screen and (max-width:480px) {
+  #head-cont ul{
+    display: block;
+  }
+
+  #bo-content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #bo-content>ul.left-side.right-side{
+    width: 100%;
+    display: flex;
+  }
+
+  #head-cont ul li{
+    display: block;
+  }
+  
+  #head-cont ul li ul{
+    width: 100%;
+    z-index: 1;
+  }
+
+  .gender{
+    margin-right: 10px;
+  }
+
+  .agree{
+    margin-right: 10px;
+  }
+
+}
+
+/* For tablet */
+@media only screen and (min-width: 481px) and (max-width: 799px){
+  #head-cont ul{
+    display: block;
+  }
+
+  #bo-content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #bo-content>ul.left-side.right-side{
+    width: 100%;
+    display: flex;
+  }
+
+  #head-cont ul li{
+    display: block;
+  }
+  
+  #head-cont ul li ul{
+    width: 100%;
+    z-index: 1;
+  }
+
+  .gender{
+    margin-right: 10px;
+  }
+
+  .agree{
+    margin-right: 10px;
+  }
+
+}
+
+/* For desktop: */
+@media only screen and (min-width: 1025px) and (max-width:1280px) {
+
+  #bo-content>ul.left-side.right-side{
+    width: 100%;
+    display: flex;
+  }
+
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/home.css">
+<title>HOME</title>
+<script src="../javascript/JQuery.js"></script>
+</head>
+<body>
+  <!--Header-->
+  <div id="header">
+    <img  id="logo" src="../images/logoNew.png">
+    <h1>Kenshin Impact</h1>
+  </div>
+  <div id="head-cont">
+    <ul>
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="character.html" >CHARACTERS</a></li>
+      <li><a href="#">ABOUT GAME<span class="drop-triangle"></span></a>
+        <ul>
+          <li><a href="aboutGame.html">ABOUT GAME</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+      </li>
+      <li><a href="register.html">REGISTER</a></li>
+    </ul>
+  </div>
+
+
+<!--body-->
+<div id="bo-content">
+  <div id="gambar">
+
+    <div id="content1">
+      <div id="paragraph">
+        <div id="slider">
+          <div id="image-container">
+            <div class="insideSlide">
+              <img src="../images/imagesslider1.jpg" alt="">
+              <div class="descript">
+                Kenshin Impact is an Open World game, <br>you can explore freely. 
+                <br>
+                You can climb mountains, cross rivers, and meet sights
+              </div>
+            </div>
+            <div class="insideSlide">
+              <img src="../images/gambarimagesslider2.jpg" alt="">
+              <div class="descript">
+                This Kenshin Impact game can spoil the eyes of its users because<br>it has
+                good graphic quality
+              </div>
+            </div>
+            <div class="insideSlide">
+               <img src="../images/imagesslider3.jpg" alt="">
+              <div class="descript">
+                This game is already available on the Google Play and Microsoft Store platforms
+                <br>
+                Download and play now
+              </div>
+            </div>
+            
+          </div>
+        </div>
+ <div>
+<button id="prev">&#10094</button>
+<button id="next">&#10095</button>
+</div> 
+      </div>
+    </div>
+
+    <div id="content2">
+      <div id="paragraph2">
+        <div id="top-content-box-container">
+          <div class="content-box">
+          <div class="centerImg">
+          <div class="contentImg1"></div>
+          </div>
+          <div class="contentHeader">AOKI</div>
+        
+        </div>
+          <div class="content-box">
+          <div class="centerImg">
+          <div class="contentImg2"></div>
+          </div>	
+          <div class="contentHeader">BARON</div>
+        
+        </div>
+          <div class="content-box">
+          <div class="centerImg">
+          <div class="contentImg3"></div>
+          </div>	
+          <div class="contentHeader">JANE</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  
+      <div id="paragraph3">
+        <div class="position">
+          <div id="content3">
+            Download And Play Now
+          </div>
+        </div>
+          <div class="position-img">
+          <div id="download">
+          <a href="https://play.google.com/"><img src="../images/googleplaay.png" class="google"></a>
+          <a href="https://www.microsoft.com/"><img src="../images/logowindows10fix.png"></a>
+          </div>
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+
+ 
+  <!--Footer-->
+  <div id="footer">
+    <div id="footer-text">Copyright © 2021 by Mihoyoman</div>
+      <div id="social">
+        <a href="https://www.instagram.com/"><img src="../images/instagram.png" width="40px"></a>
+        <a href="https://www.facebook.com/"><img src="../images/facebook.png" width="40px"></a>
+      </div>
+    </div>
+  </div>
+
+  
+
+</body>
+</html>
+<script>
+    $(function(){
+        let image_container = $('#image-container')
+        
+        let next = $('#next')
+        let prev = $('#prev')
+
+        let x = 0;
+
+        image_container.css('left',x+"%");
+        image_container.css({
+            transition: '1s'
+        })
+        next.on('click',function(){
+            x = (x<200) ? (x+100) : 0
+            image_container.css('left',-x+"%")
+        })
+
+        next.on('mouseover', function(){
+            next.css({
+                backgroundColor: 'darkblue'
+            })
+        })
+
+        next.on('mouseout', function(){
+            next.css({
+                backgroundColor: 'd'
+            })
+        })
+
+        prev.on('click',function(){
+            x = (x>0) ? (x-100) : 200
+            image_container.css('left',-x+"%")
+        })
+    })
+</script>
